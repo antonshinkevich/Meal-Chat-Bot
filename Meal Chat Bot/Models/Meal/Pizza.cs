@@ -9,7 +9,7 @@ namespace Meal_Chat_Bot.Models.Meal
     {
         public PizzaType.TypeOfPizza TypeP { get; set; }
         public PizzaSize.Size Size { get; set; }
-        public int[] IngredientsId { get; set; }
+        public PizzaIngredients.Ingredients[] Ingredients { get; set; }
         public Sauce.TastySauce Sauce { get; set; }
     }
 }
