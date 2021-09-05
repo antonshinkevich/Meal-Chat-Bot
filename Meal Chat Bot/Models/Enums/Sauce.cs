@@ -8,8 +8,10 @@ namespace Meal_Chat_Bot.Models.Enums
     {
         public enum TastySauce
         {
-            Barbecue, Teriyaki, Picante, 
-            Carbonara, Mustard, Mayonnaise
+            Barbecue, Teriyaki, 
+            Picante, Carbonara, 
+            Mustard, Mayonnaise, 
+            Geneva
         }
     }
 }

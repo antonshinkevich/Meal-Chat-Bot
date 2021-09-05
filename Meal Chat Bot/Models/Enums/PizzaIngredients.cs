@@ -41,7 +41,9 @@ namespace Meal_Chat_Bot.Models.Enums
             [Description("специи для пиццы")]
             Spicy,
             [Description("масло чесночное")]
-            Oil
+            Oil,
+            [Description("шампиньоны свежие")]
+            Mushrooms
         }
     }
 }
