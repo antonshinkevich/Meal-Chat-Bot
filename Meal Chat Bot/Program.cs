@@ -1,10 +1,15 @@
-﻿namespace Meal_Chat_Bot
+﻿using Meal_Chat_Bot.Models;
+
+namespace Meal_Chat_Bot
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataExport.ExportToJson();
+            var user1 = new User
+            {
+                Name = UsersInput.StringInput(),
+            };
         }
     }
 }

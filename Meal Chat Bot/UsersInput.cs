@@ -12,5 +12,17 @@ namespace Meal_Chat_Bot
             Console.WriteLine("Привет, друг! Это бот скорой пиццы! Выбери город в котором находишься");
             return Cities.Minsk;
         }
+
+        internal static string StringInput()
+        {
+            var input = Console.ReadLine();
+            
+            if (input != null)
+            {
+                return input;
+            }
+
+            return "";
+        }
     }
 }
