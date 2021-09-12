@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using Meal_Chat_Bot.Models.Meal;
 using Newtonsoft.Json;
-using static Meal_Chat_Bot.Models.Enums.PizzaIngredients.Ingredients;
-using static Meal_Chat_Bot.Models.Enums.PizzaSize.Size;
-using static Meal_Chat_Bot.Models.Enums.PizzaType.TypeOfPizza;
-using static Meal_Chat_Bot.Models.Enums.Sauce.TastySauce;
-using JsonSerializer = System.Text.Json.JsonSerializer;
+using static Meal_Chat_Bot.Models.Enums.PizzaIngredients;
+using static Meal_Chat_Bot.Models.Enums.PizzaSize;
+using static Meal_Chat_Bot.Models.Enums.PizzaType;
+using static Meal_Chat_Bot.Models.Enums.Sauce;
 
 namespace Meal_Chat_Bot
 {
@@ -22,8 +19,8 @@ namespace Meal_Chat_Bot
                     Name = "Carbonara",
                     Price = 8.99M,
                     Weight = 430,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = Carbonara,
                     Ingredients = new[] { Brisket, Tomato, Mozzarella, HardCheese, Spicy, Oil }
                 },
@@ -32,8 +29,8 @@ namespace Meal_Chat_Bot
                     Name = "Carbonara",
                     Price = 14.99M,
                     Weight = 860,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = Carbonara,
                     Ingredients = new[] { Brisket, Tomato, Mozzarella, HardCheese, Spicy, Oil }
                 },
@@ -42,8 +39,8 @@ namespace Meal_Chat_Bot
                     Name = "Pepperoni",
                     Price = 8.99M,
                     Weight = 380,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = null,
                     Ingredients = new[] { Mozzarella, Salami, Oil, Spicy }
                 },
@@ -52,8 +49,8 @@ namespace Meal_Chat_Bot
                     Name = "Pepperoni",
                     Price = 14.99M,
                     Weight = 760,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = null,
                     Ingredients = new[] { Mozzarella, Salami, Oil, Spicy }
                 },
@@ -62,8 +59,8 @@ namespace Meal_Chat_Bot
                     Name = "Pizza with Ham and Salami",
                     Price = 8.99M,
                     Weight = 420,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = Geneva,
                     Ingredients = new[] { Ham, Salami, Mozzarella, Oil, Spicy }
                 },
@@ -72,8 +69,8 @@ namespace Meal_Chat_Bot
                     Name = "Pizza with Ham and Salami",
                     Price = 14.99M,
                     Weight = 840,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = Geneva,
                     Ingredients = new[] { Ham, Salami, Mozzarella, Oil, Spicy }
                 },
@@ -82,8 +79,8 @@ namespace Meal_Chat_Bot
                     Name = "Village",
                     Price = 8.99M,
                     Weight = 460,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = null,
                     Ingredients = new[] { Mozzarella, Ham, Brisket, SaltedCucumbers, Onion }
                 },
@@ -92,8 +89,8 @@ namespace Meal_Chat_Bot
                     Name = "Village",
                     Price = 14.99M,
                     Weight = 920,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = null,
                     Ingredients = new[] { Mozzarella, Ham, Brisket, SaltedCucumbers, Onion }
                 },
@@ -102,8 +99,8 @@ namespace Meal_Chat_Bot
                     Name = "Mama Mia",
                     Price = 8.99M,
                     Weight = 580,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = Picante,
                     Ingredients = new[] { Ham, Salami, Mushrooms, SaltedCucumbers, Tomato, Mozzarella, Oil }
                 },
@@ -112,8 +109,8 @@ namespace Meal_Chat_Bot
                     Name = "Mama Mia",
                     Price = 14.99M,
                     Weight = 1160,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = Picante,
                     Ingredients = new[] { Ham, Salami, Mushrooms, SaltedCucumbers, Tomato, Mozzarella, Oil }
                 },
@@ -122,8 +119,8 @@ namespace Meal_Chat_Bot
                     Name = "Vegetable",
                     Price = 7.99M,
                     Weight = 550,
-                    TypeP = Vegan,
-                    Size = Standard,
+                    PizzaType = Vegan,
+                    PizzaSize = Standard,
                     Sauce = Picante,
                     Ingredients = new[] { Salad, BellPepper, Tomato, FreshCucumbers, Mozzarella, Oil }
                 },
@@ -132,8 +129,8 @@ namespace Meal_Chat_Bot
                     Name = "Vegetable",
                     Price = 11.99M,
                     Weight = 1100,
-                    TypeP = Vegan,
-                    Size = Large,
+                    PizzaType = Vegan,
+                    PizzaSize = Large,
                     Sauce = Picante,
                     Ingredients = new[] { Salad, BellPepper, Tomato, FreshCucumbers, Mozzarella, Oil }
                 },
@@ -142,8 +139,8 @@ namespace Meal_Chat_Bot
                     Name = "With Fish and Tomatoes",
                     Price = 14.99M,
                     Weight = 480,
-                    TypeP = Fish,
-                    Size = Standard,
+                    PizzaType = Fish,
+                    PizzaSize = Standard,
                     Sauce = Picante,
                     Ingredients = new[] { Salmon, Tomato, Leek, Mozzarella, Oil }
                 },
@@ -152,8 +149,8 @@ namespace Meal_Chat_Bot
                     Name = "With Fish and Tomatoes",
                     Price = 24.99M,
                     Weight = 960,
-                    TypeP = Fish,
-                    Size = Large,
+                    PizzaType = Fish,
+                    PizzaSize = Large,
                     Sauce = Picante,
                     Ingredients = new[] { Salmon, Tomato, Leek, Mozzarella, Oil }
                 },
@@ -162,8 +159,8 @@ namespace Meal_Chat_Bot
                     Name = "BBQ Chicken",
                     Price = 8.99M,
                     Weight = 550,
-                    TypeP = Meat,
-                    Size = Standard,
+                    PizzaType = Meat,
+                    PizzaSize = Standard,
                     Sauce = Barbecue,
                     Ingredients = new[] { Chicken, Mozzarella, Brisket, Tomato, Onion }
                 },
@@ -172,8 +169,8 @@ namespace Meal_Chat_Bot
                     Name = "BBQ Chicken",
                     Price = 14.99M,
                     Weight = 1100,
-                    TypeP = Meat,
-                    Size = Large,
+                    PizzaType = Meat,
+                    PizzaSize = Large,
                     Sauce = Barbecue,
                     Ingredients = new[] { Chicken, Mozzarella, Brisket, Tomato, Onion }
                 }

@@ -4,14 +4,11 @@ using System.Text;
 
 namespace Meal_Chat_Bot.Models.Enums
 {
-    class Sauce
+    public enum Sauce
     {
-        public enum TastySauce
-        {
-            Barbecue, Teriyaki, 
-            Picante, Carbonara, 
-            Mustard, Mayonnaise, 
-            Geneva
-        }
+        Barbecue, Teriyaki, 
+        Picante, Carbonara, 
+        Mustard, Mayonnaise, 
+        Geneva
     }
 }

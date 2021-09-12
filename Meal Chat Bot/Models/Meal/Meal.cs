@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Meal_Chat_Bot.Models.Meal
 {
-    abstract class Meal
+    public abstract class Meal
     {
         private static int _id;
 

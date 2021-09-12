@@ -6,11 +6,8 @@ using System.Threading.Channels;
 
 namespace Meal_Chat_Bot.Models.Enums
 {
-    class PizzaSize
+    public enum PizzaSize
     {
-        public enum Size
-        {
-            Standard, Large
-        }
+        Standard, Large
     }
 }

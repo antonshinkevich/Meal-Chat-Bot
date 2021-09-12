@@ -10,10 +10,11 @@ namespace Meal_Chat_Bot
     {
         static void Main(string[] args)
         {
+            var gtf = FileSystem.ReadJson();
             Console.WriteLine("Hi friend! It's Fast_Pizza bot. Please select your city");
             var user1 = new User
             {
-                City = EnumItemSelection<City.Cities>(),
+                City = EnumItemSelection<City>(),
                 Name = StringInput("Please enter your name")
             };
 

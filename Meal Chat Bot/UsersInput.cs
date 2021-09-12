@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using static Meal_Chat_Bot.Models.Enums.City;
+using Meal_Chat_Bot.Models.Enums;
 
 namespace Meal_Chat_Bot
 {
@@ -11,12 +9,11 @@ namespace Meal_Chat_Bot
         #region ItemSelect
         internal static T EnumItemSelection<T>() where T : Enum
         {
-            var list = Enum.GetValues(typeof(T)).Cast<T>().ToList();
-            var array = list as T[] ?? list.ToArray();
+            var array = EnumToArray<T>(typeof(T));
             ListConsoleOutput(array);
 
             var index = SelectIndex(array);
-            return list[index];
+            return array[index];
         }
 
         private static int SelectIndex<T>(T[] array)
@@ -38,6 +35,17 @@ namespace Meal_Chat_Bot
             }
 
             return index;
+        }
+
+        private static void PizzaPrint<T>() where T : Enum
+        {
+            ListConsoleOutput(EnumToArray<T>(typeof(PizzaType)));
+        }
+
+        private static T[] EnumToArray<T>(Type enumType)
+        {
+            var list = Enum.GetValues(enumType).Cast<T>().ToList();
+            return list as T[] ?? list.ToArray();
         }
         #endregion
 

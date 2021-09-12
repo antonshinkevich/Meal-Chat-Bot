@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Meal_Chat_Bot.Models.Enums
 {
-    class BurgerType
+    enum BurgerType
     {
-        enum TypeOfBurger
-        {
-            Beef, Chicken
-        }
+        Beef, Chicken
     }
 }

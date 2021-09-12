@@ -53,6 +53,6 @@ namespace Meal_Chat_Bot.Models
         public string Address { get; set; }
         public string Phone { get; set; }
         public DateTime Time { get; set; }
-        public City.Cities City { get; set; }
+        public City City { get; set; }
     }
 }
