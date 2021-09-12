@@ -19,5 +19,7 @@ namespace Meal_Chat_Bot.Models.Meal
         {
             Id = _id++;
         }
+
+        internal static void MealPrint(IEnumerable<Pizza> listPizzas) { }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Meal_Chat_Bot.Models.Enums;
+using Meal_Chat_Bot.Models.Meal;
 
 namespace Meal_Chat_Bot
 {
@@ -37,17 +39,31 @@ namespace Meal_Chat_Bot
             return index;
         }
 
-        private static void PizzaPrint<T>() where T : Enum
-        {
-            ListConsoleOutput(EnumToArray<T>(typeof(PizzaType)));
-        }
-
         private static T[] EnumToArray<T>(Type enumType)
         {
             var list = Enum.GetValues(enumType).Cast<T>().ToList();
             return list as T[] ?? list.ToArray();
         }
         #endregion
+
+        internal static PizzaType? SelectType()
+        {
+            Console.WriteLine("Please select pizza type. '3' for print all menu");
+            ListConsoleOutput(EnumToArray<PizzaType>(typeof(PizzaType)));
+            Console.WriteLine("3) All pizzas");
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out int index) && index >= 0 && index <= 3)
+                {
+                    if (index == 3)
+                        return null;
+
+                    return EnumToArray<PizzaType>(typeof(PizzaType))[index];
+                }
+
+                Console.WriteLine("Input incorrect. Please repeat");
+            }
+        }
 
         private static void ListConsoleOutput<T>(T[] array) where T : Enum
         {
@@ -68,5 +84,6 @@ namespace Meal_Chat_Bot
 
             return input;
         }
+
     }
 }
