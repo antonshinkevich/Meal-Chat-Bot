@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Linq;
 using Meal_Chat_Bot.Models.Enums;
 using Meal_Chat_Bot.Models.Meal;
 
-namespace Meal_Chat_Bot.Models.Specification
+namespace Meal_Chat_Bot.Models.Filter
 {
     public abstract class Specification<T>
     {

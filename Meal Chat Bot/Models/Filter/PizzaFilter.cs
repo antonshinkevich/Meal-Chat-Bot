@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Meal_Chat_Bot.Models.Meal;
-using Meal_Chat_Bot.Models.Specification;
 
 namespace Meal_Chat_Bot.Models.Filter
 {

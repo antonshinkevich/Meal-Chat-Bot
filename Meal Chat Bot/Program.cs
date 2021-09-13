@@ -3,7 +3,6 @@ using Meal_Chat_Bot.Models;
 using Meal_Chat_Bot.Models.Enums;
 using Meal_Chat_Bot.Models.Filter;
 using Meal_Chat_Bot.Models.Meal;
-using Meal_Chat_Bot.Models.Specification;
 using static Meal_Chat_Bot.UsersInput;
 
 namespace Meal_Chat_Bot
@@ -27,17 +26,12 @@ namespace Meal_Chat_Bot
 
             var pFilter = new PizzaFilter();
 
-            var pizzaType = SelectType();
+            var selectedPizzaType = SelectType();
 
-            if (pizzaType == null)
-            {
-                
-            }
-            else
-            {
-                var userMenu =
-                    pFilter.Filter(menu, new Specification<Pizza>.PizzaTypeSpecification(pizzaType.Value));
-            }
+            var userMenu =
+                    pFilter.Filter(menu, new Specification<Pizza>.PizzaTypeSpecification(selectedPizzaType.Value));
+
+            Pizza.PizzaPrint(selectedPizzaType == null ? menu : userMenu);
 
             user1.Email = StringInput("Input your Email address");
         }
