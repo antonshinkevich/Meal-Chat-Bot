@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using Meal_Chat_Bot.Models.Meal;
 using Newtonsoft.Json;
 using static Meal_Chat_Bot.Models.Enums.PizzaIngredients;
@@ -10,9 +11,9 @@ namespace Meal_Chat_Bot
 {
     static class DataExport
     {
-        internal static async void ExportToJson()
+        internal static Pizza[] ExportToJson()
         {
-            Pizza[] PizzaArray =
+            Pizza[] pizzaArray =
             {
                 new Pizza()
                 {
@@ -176,9 +177,10 @@ namespace Meal_Chat_Bot
                 }
             };
 
-            string path = @"D:\pizzas.json";
-            string json = JsonConvert.SerializeObject(PizzaArray, Formatting.Indented);
-            await File.WriteAllTextAsync(path, json);
+            //string path = @"D:\pizzas.json";
+            //string json = JsonConvert.SerializeObject(pizzaArray, Formatting.Indented);
+            //await File.WriteAllTextAsync(path, json);
+            return pizzaArray;
         }
     }
 }

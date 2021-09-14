@@ -47,7 +47,7 @@ namespace Meal_Chat_Bot.Models.Filter
         {
             protected readonly Specification<T>[] items;
 
-            protected CompositeSpecification(params Specification<T>[] items)
+            internal CompositeSpecification(params Specification<T>[] items)
             {
                 this.items = items;
             }
