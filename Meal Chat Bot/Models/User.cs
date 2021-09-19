@@ -9,6 +9,7 @@ namespace Meal_Chat_Bot.Models
     {
         private string _name;
         private string _email;
+        //private Basket _basket;
 
         public string Name
         {
@@ -54,5 +55,12 @@ namespace Meal_Chat_Bot.Models
         public string Phone { get; set; }
         public DateTime Time { get; set; }
         public City City { get; set; }
+        //public Basket UserBasket { get => _basket};
+        public Basket UserBasket { get; set; }
+
+        public User()
+        {
+            UserBasket = new Basket();
+        }
     }
 }

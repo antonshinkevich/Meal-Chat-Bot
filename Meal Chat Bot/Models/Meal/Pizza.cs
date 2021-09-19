@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using Meal_Chat_Bot.Models.Enums;
+using static System.Console;
 
 namespace Meal_Chat_Bot.Models.Meal
 {
@@ -13,35 +13,35 @@ namespace Meal_Chat_Bot.Models.Meal
         public PizzaIngredients[] Ingredients { get; set; }
         public Sauce? Sauce { get; set; }
 
-        public override string ToString()
-        {
-            var ingredients = Ingredients.Aggregate(
-                "",
-                (current, next) => current + "| " + next);
+        public string TextIngredients => Ingredients.Aggregate("",
+                (current, next) => $"{current}|{next}|");
 
-            return $"Name: {Name}. Type: {PizzaType} Ingredients: \r\n" +
-                   $"{ingredients}";
-        }
+        public override string ToString() => $"Name: {Name}. Type: {PizzaType} \r\nIngredients:";
 
         internal static void PizzaPrint(IEnumerable<Pizza> listPizzas)
         {
             if (listPizzas == null)
             {
-                Console.WriteLine("Selected Pizza list is empty");
+                WriteLine("Selected Pizza list is empty");
             }
             else
             {
-                int i = 1;
+                int i = 2, count = 0;
+                var price = new decimal[2];
 
                 foreach (var pizza in listPizzas)
                 {
-                    var price = new decimal[2];
                     price[i % 2] = pizza.Price;
 
-                    if (i % 2 == 0)
+                    if (i % 2 == 1)
                     {
-                        Console.WriteLine(pizza.ToString());
-                        Console.WriteLine($"Price of a average pizza is {price[0]}. For large pizza price is {price[1]}");
+                        count++;
+                        WriteLine($"{count}) " + pizza.ToString(), ForegroundColor = ConsoleColor.White);
+                        WriteLine(pizza.TextIngredients, ForegroundColor = ConsoleColor.DarkYellow);
+                        Write("Price of a average pizza is ", ForegroundColor = ConsoleColor.White);
+                        Write($"{price[0]}.\r\n", ForegroundColor = ConsoleColor.DarkGreen);
+                        Write("For large pizza price is ", ForegroundColor = ConsoleColor.White);
+                        Write($"{price[1]}.\r\n\r\n", ForegroundColor = ConsoleColor.DarkGreen);
                     }
 
                     i++;

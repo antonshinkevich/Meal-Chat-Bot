@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Threading.Channels;
 using Meal_Chat_Bot.Models.Enums;
 using Meal_Chat_Bot.Models.Meal;
 
@@ -85,5 +87,50 @@ namespace Meal_Chat_Bot
             return input;
         }
 
+        /// <summary>
+        /// Select pizza from input menu
+        /// </summary>
+        /// <param name="menu">Menu</param>
+        /// <returns></returns>
+        internal static Pizza PizzaSelect(IEnumerable<Pizza> menu)
+        {
+            int index;
+            var pizzas = menu as Pizza[] ?? menu.ToArray();
+            Console.WriteLine("Please enter the number of pizza you want to add to the order", Console.ForegroundColor = ConsoleColor.White);
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out index) && index > 0 && index <= pizzas.Length)
+                    break;
+
+                Console.WriteLine("Not correct. Try again");
+            }
+
+            //Pizza size select
+            Console.WriteLine("You need a 'L'arge pizza or 'S'tandard?\r\n" +
+                              "Input 'L' or 'S'.");
+
+            do
+            {
+                var sizeSelect = char.ToUpper(Convert.ToChar(Console.ReadLine() ?? string.Empty));
+                if (sizeSelect == 'S' || sizeSelect == 'L')
+                {
+                    return sizeSelect == 'S' ? pizzas[index * 2 - 2] : pizzas[index * 2 - 1];
+                }
+
+                Console.WriteLine("Not correct. Try again");
+            } while (true);
+        }
+
+        internal static int PizzaCountInput()
+        {
+            Console.WriteLine("Pleas");
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out int count) && count > 0 && count < 15)
+                    return count;
+
+                Console.WriteLine("Not correct input");
+            }
+        }
     }
 }

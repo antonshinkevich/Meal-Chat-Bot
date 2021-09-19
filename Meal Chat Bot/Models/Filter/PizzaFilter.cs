@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Meal_Chat_Bot.Models.Meal;
 
 namespace Meal_Chat_Bot.Models.Filter

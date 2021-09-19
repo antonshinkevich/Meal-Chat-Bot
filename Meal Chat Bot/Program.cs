@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Meal_Chat_Bot.Models;
 using Meal_Chat_Bot.Models.Enums;
 using Meal_Chat_Bot.Models.Filter;
@@ -42,7 +41,8 @@ namespace Meal_Chat_Bot
             }
 
             Pizza.PizzaPrint(userMenu);
-
+            var position = PizzaSelect(userMenu);
+            user1.UserBasket.AddPosition(position, 1);
             user1.Email = StringInput("Input your Email address");
         }
     }

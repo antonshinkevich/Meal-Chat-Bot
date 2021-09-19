@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Meal_Chat_Bot.Models.Enums
+﻿namespace Meal_Chat_Bot.Models.Enums
 {
     public enum PizzaType
     {
