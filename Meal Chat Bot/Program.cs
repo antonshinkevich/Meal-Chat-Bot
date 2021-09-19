@@ -41,9 +41,12 @@ namespace Meal_Chat_Bot
             }
 
             Pizza.PizzaPrint(userMenu);
-            var position = PizzaSelect(userMenu);
-            user1.UserBasket.AddPosition(position, 1);
-            user1.Email = StringInput("Input your Email address");
+            
+            do
+            {
+                user1.UserBasket.AddPosition(PizzaSelect(userMenu), PizzaCountInput());
+                user1.Email = StringInput("Input your Email address");
+            } while (YesOrNo());
         }
     }
 }

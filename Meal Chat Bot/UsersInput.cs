@@ -123,7 +123,7 @@ namespace Meal_Chat_Bot
 
         internal static int PizzaCountInput()
         {
-            Console.WriteLine("Pleas");
+            Console.WriteLine("How many pizzas to order?");
             while (true)
             {
                 if (int.TryParse(Console.ReadLine(), out int count) && count > 0 && count < 15)
@@ -131,6 +131,19 @@ namespace Meal_Chat_Bot
 
                 Console.WriteLine("Not correct input");
             }
+        }
+
+        internal static bool YesOrNo()
+        {
+            do
+            {
+                Console.WriteLine("Continue choosing pizza?");
+                var sizeSelect = char.ToUpper(Convert.ToChar(Console.ReadLine() ?? string.Empty));
+                if (sizeSelect == 'Y' || sizeSelect == 'N')
+                    return sizeSelect == 'Y';
+
+                Console.WriteLine("Not correct. Try again");
+            } while (true);
         }
     }
 }
