@@ -13,7 +13,7 @@ namespace Meal_Chat_Bot.Models.Meal
         public PizzaIngredients[] Ingredients { get; set; }
         public Sauce? Sauce { get; set; }
 
-        public string TextIngredients => Ingredients.Aggregate("",
+        internal string TextIngredients => Ingredients.Aggregate("",
                 (current, next) => $"{current}|{next}|");
 
         public override string ToString() => $"Name: {Name}. Type: {PizzaType} \r\nIngredients:";

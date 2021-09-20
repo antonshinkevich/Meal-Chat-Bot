@@ -1,18 +1,264 @@
 [
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":0,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":0,"Name":"Carbonara","Price":8.99,"Weight":430},
-    {"TypeP":0,"Size":1,"IngredientNames":["Brisket","Tomato","Mozzarella","HardCheese","Spicy","Oil"],"Sauce":3,"Id":1,"Name":"Carbonara","Price":8.99,"Weight":430},
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      1,
+      7,
+      12,
+      13,
+      14,
+      15
+    ],
+    "Sauce": 3,
+    "Id": 0,
+    "Name": "Carbonara",
+    "Price": 8.99,
+    "Weight": 430
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      1,
+      7,
+      12,
+      13,
+      14,
+      15
+    ],
+    "Sauce": 3,
+    "Id": 1,
+    "Name": "Carbonara",
+    "Price": 14.99,
+    "Weight": 860
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      12,
+      2,
+      15,
+      14
+    ],
+    "Sauce": null,
+    "Id": 2,
+    "Name": "Pepperoni",
+    "Price": 8.99,
+    "Weight": 380
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      12,
+      2,
+      15,
+      14
+    ],
+    "Sauce": null,
+    "Id": 3,
+    "Name": "Pepperoni",
+    "Price": 14.99,
+    "Weight": 760
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      0,
+      2,
+      12,
+      15,
+      14
+    ],
+    "Sauce": 6,
+    "Id": 4,
+    "Name": "Pizza with Ham and Salami",
+    "Price": 8.99,
+    "Weight": 420
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      0,
+      2,
+      12,
+      15,
+      14
+    ],
+    "Sauce": 6,
+    "Id": 5,
+    "Name": "Pizza with Ham and Salami",
+    "Price": 14.99,
+    "Weight": 840
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      12,
+      0,
+      1,
+      6,
+      10
+    ],
+    "Sauce": null,
+    "Id": 6,
+    "Name": "Village",
+    "Price": 8.99,
+    "Weight": 460
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      12,
+      0,
+      1,
+      6,
+      10
+    ],
+    "Sauce": null,
+    "Id": 7,
+    "Name": "Village",
+    "Price": 14.99,
+    "Weight": 920
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      0,
+      2,
+      16,
+      6,
+      7,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 8,
+    "Name": "Mama Mia",
+    "Price": 8.99,
+    "Weight": 580
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      0,
+      2,
+      16,
+      6,
+      7,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 9,
+    "Name": "Mama Mia",
+    "Price": 14.99,
+    "Weight": 1160
+  },
+  {
+    "PizzaType": 1,
+    "PizzaSize": 0,
+    "Ingredients": [
+      9,
+      8,
+      7,
+      5,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 10,
+    "Name": "Vegetable",
+    "Price": 7.99,
+    "Weight": 550
+  },
+  {
+    "PizzaType": 1,
+    "PizzaSize": 1,
+    "Ingredients": [
+      9,
+      8,
+      7,
+      5,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 11,
+    "Name": "Vegetable",
+    "Price": 11.99,
+    "Weight": 1100
+  },
+  {
+    "PizzaType": 2,
+    "PizzaSize": 0,
+    "Ingredients": [
+      4,
+      7,
+      11,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 12,
+    "Name": "With Fish and Tomatoes",
+    "Price": 14.99,
+    "Weight": 480
+  },
+  {
+    "PizzaType": 2,
+    "PizzaSize": 1,
+    "Ingredients": [
+      4,
+      7,
+      11,
+      12,
+      15
+    ],
+    "Sauce": 2,
+    "Id": 13,
+    "Name": "With Fish and Tomatoes",
+    "Price": 24.99,
+    "Weight": 960
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 0,
+    "Ingredients": [
+      3,
+      12,
+      1,
+      7,
+      10
+    ],
+    "Sauce": 0,
+    "Id": 14,
+    "Name": "BBQ Chicken",
+    "Price": 8.99,
+    "Weight": 550
+  },
+  {
+    "PizzaType": 0,
+    "PizzaSize": 1,
+    "Ingredients": [
+      3,
+      12,
+      1,
+      7,
+      10
+    ],
+    "Sauce": 0,
+    "Id": 15,
+    "Name": "BBQ Chicken",
+    "Price": 14.99,
+    "Weight": 1100
+  }
 ]

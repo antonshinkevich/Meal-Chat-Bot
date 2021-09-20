@@ -12,8 +12,7 @@ namespace Meal_Chat_Bot
     {
         static void Main(string[] args)
         {
-            //var menu = PizzaMenuList.GetMenu();
-            var menu = DataExport.ExportToJson();
+            var menu = PizzaMenuList.GetMenu();
             Console.WriteLine("Hi friend! It's Fast_Pizza bot. Please select your city");
 
             var user1 = new User

@@ -11,7 +11,7 @@ namespace Meal_Chat_Bot
 {
     static class DataExport
     {
-        internal static Pizza[] ExportToJson()
+        internal static void ExportToJson()
         {
             Pizza[] pizzaArray =
             {
@@ -177,10 +177,8 @@ namespace Meal_Chat_Bot
                 }
             };
 
-            //string path = @"D:\pizzas.json";
-            //string json = JsonConvert.SerializeObject(pizzaArray, Formatting.Indented);
-            //await File.WriteAllTextAsync(path, json);
-            return pizzaArray;
+            string json = JsonConvert.SerializeObject(pizzaArray, Formatting.Indented);
+            FileSystem.WriteText(json);
         }
     }
 }
