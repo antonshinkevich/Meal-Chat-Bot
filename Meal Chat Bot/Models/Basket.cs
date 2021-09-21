@@ -5,12 +5,12 @@ namespace Meal_Chat_Bot.Models
 {
     class Basket
     {
-        private List<Position> _basketOrder;
-
         public Basket()
         {
-            _basketOrder = new List<Position>();
+            BasketOrder = new List<Position>();
         }
+
+        public List<Position> BasketOrder { get; }
 
         public void AddPosition(Meal.Meal orderUnit, int counter)
         {
@@ -20,10 +20,10 @@ namespace Meal_Chat_Bot.Models
                 Counter = counter,
             };
 
-            _basketOrder.Add(order);
+            BasketOrder.Add(order);
         }
 
-        class Position
+        internal class Position
         {
             protected internal Meal.Meal Meal { get; set; }
             protected internal int Counter { get; set; }
